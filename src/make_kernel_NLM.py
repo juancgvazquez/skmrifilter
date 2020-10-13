@@ -4,7 +4,7 @@ import numpy as np
 def make_kernel(f):              
 
 """
-crea la ventana móvil local de tamaño fxf
+crea la ventana móvil local de tamaño 2f+1
 """
     kernel=np.zeros((2*f+1,2*f+1))  
     for d in range(1,f+1):    
