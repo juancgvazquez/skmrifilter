@@ -1,5 +1,5 @@
 # Scikit MRI Filters
-![logo](https://github.com/jerefarrher/skmrifilter/raw/master/resources/logo.jpg = 300x)
+<img src='https://github.com/jerefarrher/skmrifilter/raw/master/resources/logo.jpg' width=300px></img>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
