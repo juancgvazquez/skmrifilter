@@ -24,8 +24,8 @@ requirements = [x.split('==')[0] for x in reqfile if '-e' not in x]
 # SETUP #
 setup(name="skmrifilter",
       version=version['__version__'],
-      author=['Jeremías Fahrrer', 'Juan Carlos Vázquez'],
-      author_email='jerefahrrer@gmail.com',
+      author=['Jeremías Farrher', 'Juan Carlos Vázquez'],
+      author_email='jerefarrher91@gmail.com',
       description='Package to select and chain filters for MRI Images',
       long_description=long_description,
       long_description_content_type="text/markdown",
