@@ -1,3 +1,12 @@
+# This file is part of the
+#   Scikit-Learn MRI-Filter Project
+#   (https://github.com/jerefarrher/skmrifilter).
+# Copyright (c) 2020, Jeremías Fahrrer - Juan Carlos Vázquez
+# License: MIT
+#   Full Text:
+#   https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
+
+
 from skimage.restoration import (denoise_tv_chambolle, denoise_bilateral,
                                  denoise_wavelet, estimate_sigma)
 from skimage import data, img_as_float
@@ -33,7 +42,7 @@ ax[0, 1].axis('off')
 ax[0, 1].set_title('denoise tv')
 
 pipe = Pipeline(steps=[
-    ('image_filters', 
+    ('image_filters',
      ImageFilterTransformer(methods={denoise_tv_chambolle: None,
                                      denoise_bilateral: {"multichannel": True},
                                      denoise_wavelet: None})),
