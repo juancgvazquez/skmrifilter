@@ -1,7 +1,7 @@
 # This file is part of the
 #   Scikit-Learn MRI-Filter Project
 #   (https://github.com/jerefarrher/skmrifilter).
-# Copyright (c) 2020, Jeremías Fahrrer - Juan Carlos Vázquez
+# Copyright (c) 2020, Jeremías Farrher - Juan Carlos Vázquez
 # License: MIT
 #   Full Text: https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
 
