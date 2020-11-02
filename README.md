@@ -25,5 +25,5 @@ making efforts to test it in other environments.
 
 
 Authors: 
-Jeremías Fahrrer
+Jeremías Farrher
 Juan Carlos Vázquez
