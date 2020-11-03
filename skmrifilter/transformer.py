@@ -4,11 +4,10 @@
 # Copyright (c) 2020, Jeremías Fahrrer - Juan Carlos Vázquez
 # License: MIT
 #   Full Text: https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
-"""Module that contains the ImageFilterTransformer Class."""
+""" Module that contains the ImageFilterTransformer Class."""
 from skimage.restoration import (denoise_tv_chambolle, denoise_wavelet)
 from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
-
 
 class ImageFilterTransformer(BaseEstimator, TransformerMixin):
     """Class Transformer to Use and Chain Image Filters."""
