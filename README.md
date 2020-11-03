@@ -25,7 +25,7 @@ allow to do parameter and filter optimization, in GridSearch kind of workflow.
 The package was developed in Python 3.8, so that is the minimum requirement to run it. We are
 making efforts to test it in other environments.
 
-
+--------------------
 Authors: 
 Jeremías Farrher
 Juan Carlos Vázquez
