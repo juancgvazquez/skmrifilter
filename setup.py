@@ -16,9 +16,9 @@ version = {}
 with open('./skmrifilter/version.py', 'r') as v:
     exec(v.read(), version)
 # Requirements
-with open('./requirements.txt', 'r') as file:
-    reqfile = file.readlines()
-requirements = [x.split('==')[0] for x in reqfile if '-e' not in x]
+requirements = ['numpyi',
+                'skimage',
+                'sklearn']
 
 
 # SETUP #
