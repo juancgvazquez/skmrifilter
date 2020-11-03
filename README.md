@@ -1,10 +1,12 @@
 # Scikit MRI Filters
-<img src='https://github.com/jerefarrher/skmrifilter/raw/master/resources/logo.jpg' width=300px></img>
+<img src='https://github.com/juancgvazquez/skmrifilter/raw/master/resources/logo.jpg' width=300px></img>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.6+](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Build Status](https://travis-ci.com/juancgvazquez/skmrifilter.svg?branch=master)](https://travis-ci.com/juancgvazquez/skmrifilter)
+
+
 ** Image Filters for MR **
 
 The purpose of this project is to facilitate the Magnetic Resonance Images workflow.

@@ -1,9 +1,9 @@
 # This file is part of the
 #   Scikit-Learn MRI-Filter Project
-#   (https://github.com/jerefarrher/skmrifilter).
+#   (https://github.com/juancgvazquez/skmrifilter).
 # Copyright (c) 2020, Jeremías Fahrrer - Juan Carlos Vázquez
 # License: MIT
-#   Full Text: https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
+#   Full Text: https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
 
 import cv2
 from skimage.filters import apply_hysteresis_threshold

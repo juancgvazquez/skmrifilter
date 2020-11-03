@@ -1,9 +1,9 @@
 # This file is part of the
 #   Scikit-Learn MRI-Filter Project
-#   (https://github.com/jerefarrher/skmrifilter).
+#   (https://github.com/juancvazquez/skmrifilter).
 # Copyright (c) 2020, Jeremías Fahrrer - Juan Carlos Vázquez
 # License: MIT
-#   Full Text: https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
+#   Full Text: https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
 
 from skimage.restoration import (denoise_tv_chambolle, denoise_wavelet)
 from sklearn.base import BaseEstimator, TransformerMixin

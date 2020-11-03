@@ -1,10 +1,10 @@
 # This file is part of the
 #   Scikit-Learn MRI-Filter Project
-#   (https://github.com/jerefarrher/skmrifilter).
+#   (https://github.com/juancgvazquez/skmrifilter).
 # Copyright (c) 2020, Jeremías Farrher - Juan Carlos Vázquez
 # License: MIT
 #   Full Text:
-#   https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
+#   https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
 
 
 from skimage.restoration import (denoise_tv_chambolle, denoise_bilateral,

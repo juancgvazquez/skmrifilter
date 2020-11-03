@@ -1,9 +1,9 @@
 # This file is part of the
 #   Scikit-Learn MRI-Filter Project
-#   (https://github.com/jerefarrher/skmrifilter).
+#   (https://github.com/jencgvazquez/skmrifilter).
 # Copyright (c) 2020, Jeremías Farrher - Juan Carlos Vázquez
 # License: MIT
-#   Full Text: https://github.com/jerefarrher/skmrifilter/blob/master/LICENSE
+#   Full Text: https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
 
 from setuptools import setup, find_packages
 
@@ -17,7 +17,7 @@ with open('./skmrifilter/version.py', 'r') as v:
     exec(v.read(), version)
 # Requirements
 requirements = ['numpy',
-                'skimage',
+                'scikit-image',
                 'sklearn']
 
 
@@ -29,7 +29,7 @@ setup(name="skmrifilter",
       description='Package to select and chain filters for MRI Images',
       long_description=long_description,
       long_description_content_type="text/markdown",
-      url='https://github.com/jerefarrher/skmrifilter/',
+      url='https://github.com/juancgvazquez/skmrifilter/',
       license='MIT',
       install_requires=requirements,
       packages=find_packages(),
