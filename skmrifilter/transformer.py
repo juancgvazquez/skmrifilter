@@ -18,11 +18,11 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
         self.methods = methods
 
     def fit(self, X, y=None) -> 'ImageFilterTransformer':
-        """Fits Transformer."""
+        """Fit Transformer."""
         return self
 
     def transform(self, x: np.ndarray) -> np.ndarray:
-        """Applies Filters."""
+        """Apply Filters."""
         image_filtered = x
         for filt in self.methods.items():
             print(f"Applying {filt[0].__name__}")
