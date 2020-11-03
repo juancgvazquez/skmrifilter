@@ -23,7 +23,7 @@ def test_simple_transformer():
     with open('tests/test_output1.pkl', 'rb') as f:
         test_transformer = pickle.load(f)
     npt.assert_array_almost_equal(test_transformer, transformed_image,
-                                         decimal=15)
+                                  decimal=15)
 
 
 def test_pipeline_transformer():
@@ -38,4 +38,4 @@ def test_pipeline_transformer():
     with open('tests/test_output_pipeline.pkl', 'rb') as f:
         pipe_test_output = pickle.load(f)
     npt.assert_array_almost_equal(pipe_transformed, pipe_test_output,
-                                         decimal=15)
+                                  decimal=15)
