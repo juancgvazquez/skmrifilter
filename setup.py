@@ -16,7 +16,7 @@ version = {}
 with open('./skmrifilter/version.py', 'r') as v:
     exec(v.read(), version)
 # Requirements
-requirements = ['numpyi',
+requirements = ['numpy',
                 'skimage',
                 'sklearn']
 
