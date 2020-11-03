@@ -13,7 +13,7 @@ with open('./README.md', 'r') as f:
     long_description = f.read()
 # Version
 version = {}
-with open('./skmrifilter/version.py', 'r') as v:
+with open('./skmrifilter/__init__.py', 'r') as v:
     exec(v.read(), version)
 # Requirements
 requirements = ['numpy',
