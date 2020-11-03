@@ -20,12 +20,10 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
 
     def transform(self, x: np.ndarray) -> np.ndarray:
         image_filtered = x
-        for filt in self.methods:
-            filt_name = next(iter(filt))
-            print(f"Applying {filt_name}")
-            print(filt)
-            if filt[filt_name] is None:
-                image_filtered = filt_name(image_filtered)
+        for filt in self.methods.items():
+            print(f"Applying {filt[0].__name__}")
+            if filt[1] is None:
+                image_filtered = filt[0](image_filtered)
             else:
-                image_filtered = filt_name(image_filtered, **filt[filt_name])
+                image_filtered = filt[0](image_filtered, **filt[1])
         return image_filtered
