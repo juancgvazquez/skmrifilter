@@ -24,7 +24,7 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
             filt_name = next(iter(filt))
             print(f"Applying {filt_name}")
             print(filt)
-            if filt[filt_name] == None:
+            if filt[filt_name] is None:
                 image_filtered = filt_name(image_filtered)
             else:
                 image_filtered = filt_name(image_filtered, **filt[filt_name])
