@@ -18,8 +18,11 @@ import numpy.testing as npt
 def test_simple_transformer():
     with open('tests/noisy_image.pkl', 'rb') as f:
         noisy = pickle.load(f)
-    transformer = ImageFilterTransformer()
-    transformed_image = transformer.transform(noisy)
+    t_tv_chambelle = ImageFilterTransformer(denoise_tv_chambolle)
+    t_wavelet = ImageFilterTransformer(denoise_wavelet)
+    pipeline = Pipeline(steps=[(t_tv_chambelle.__repr__(), t_tv_chambelle),
+                        (t_wavelet.__repr__(), t_wavelet)])
+    transformed_image = pipeline.transform(noisy)
     with open('tests/test_output1.pkl', 'rb') as f:
         test_transformer = pickle.load(f)
     npt.assert_array_almost_equal(test_transformer, transformed_image,
@@ -29,11 +32,12 @@ def test_simple_transformer():
 def test_pipeline_transformer():
     with open('tests/noisy_image.pkl', 'rb') as f:
         noisy = pickle.load(f)
-    methods = {denoise_tv_chambolle: None,
-               denoise_bilateral: {"multichannel": True},
-               denoise_wavelet: None}
-    pipe = Pipeline(steps=[('image_filters',
-                    ImageFilterTransformer(methods=methods))])
+    t_tv_chambelle = ImageFilterTransformer(denoise_tv_chambolle)
+    t_bilateral = ImageFilterTransformer(denoise_bilateral, multichannel=True)
+    t_wavelet = ImageFilterTransformer(denoise_wavelet)
+    pipe = Pipeline(steps=[(t_tv_chambelle.__repr__(), t_tv_chambelle),
+                    (t_bilateral.__repr__(), t_bilateral),
+                    (t_wavelet.__repr__(), t_wavelet)])
     pipe_transformed = pipe.transform(noisy)
     with open('tests/test_output_pipeline.pkl', 'rb') as f:
         pipe_test_output = pickle.load(f)

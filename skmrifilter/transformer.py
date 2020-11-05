@@ -5,7 +5,6 @@
 # License: MIT
 #   Full Text: https://github.com/juancgvazquez/skmrifilter/blob/master/LICENSE
 """Module that contains the ImageFilterTransformer Class."""
-from skimage.restoration import (denoise_tv_chambolle, denoise_wavelet)
 from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
 
@@ -13,21 +12,20 @@ import numpy as np
 class ImageFilterTransformer(BaseEstimator, TransformerMixin):
     """Class Transformer to Use and Chain Image Filters."""
 
-    def __init__(self, methods={denoise_tv_chambolle: None,
-                                denoise_wavelet: None}) -> None:
-        self.methods = methods
+    def __init__(self, filter, **kwargs) -> None:
+        self.filter = filter
+        self.kwargs = kwargs
 
     def fit(self, X, y=None) -> 'ImageFilterTransformer':
         """Fit Transformer."""
         return self
 
-    def transform(self, x: np.ndarray) -> np.ndarray:
+    def __repr__(self):
+        """Return representation."""
+        filter_name = getattr(self.filter, "__name__")
+        return (f'ImageFilterTransformer({filter_name, self.kwargs}')
+
+    def transform(self, X: np.ndarray) -> np.ndarray:
         """Apply Filters."""
-        image_filtered = x
-        for filt in self.methods.items():
-            print(f"Applying {filt[0].__name__}")
-            if filt[1] is None:
-                image_filtered = filt[0](image_filtered)
-            else:
-                image_filtered = filt[0](image_filtered, **filt[1])
+        image_filtered = self.filter(X, **self.kwargs)
         return image_filtered
