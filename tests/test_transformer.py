@@ -18,6 +18,16 @@ import numpy.testing as npt
 def test_simple_transformer():
     with open('tests/noisy_image.pkl', 'rb') as f:
         noisy = pickle.load(f)
+    t_wavelet = ImageFilterTransformer(denoise_wavelet)
+    transformed_image = t_wavelet.transform(noisy)
+    with open('tests/noisy_wavelet.pkl', 'rb') as f:
+        test_wavelet = pickle.load(f)
+    npt.assert_array_almost_equal(transformed_image, test_wavelet, decimal=15)
+
+
+def test_pipe_no_kwargs():
+    with open('tests/noisy_image.pkl', 'rb') as f:
+        noisy = pickle.load(f)
     t_tv_chambelle = ImageFilterTransformer(denoise_tv_chambolle)
     t_wavelet = ImageFilterTransformer(denoise_wavelet)
     pipeline = Pipeline(steps=[(t_tv_chambelle.__repr__(), t_tv_chambelle),
@@ -29,7 +39,7 @@ def test_simple_transformer():
                                   decimal=15)
 
 
-def test_pipeline_transformer():
+def test_pipeline_kwargs():
     with open('tests/noisy_image.pkl', 'rb') as f:
         noisy = pickle.load(f)
     t_tv_chambelle = ImageFilterTransformer(denoise_tv_chambolle)

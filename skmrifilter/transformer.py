@@ -15,6 +15,10 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
     def __init__(self, filter, **kwargs) -> None:
         self.filter = filter
         self.kwargs = kwargs
+        if hasattr(self.filter, '__qualname__'):
+            self.filter_name = getattr(self.filter, "__qualname__")
+        else:
+            self.filter_name = getattr(self.filter, "__name__")
 
     def fit(self, X, y=None) -> 'ImageFilterTransformer':
         """Fit Transformer."""
@@ -22,8 +26,7 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
 
     def __repr__(self):
         """Return representation."""
-        filter_name = getattr(self.filter, "__name__")
-        return (f'ImageFilterTransformer({filter_name, self.kwargs}')
+        return (f'ImageFilterTransformer({self.filter_name, self.kwargs}')
 
     def transform(self, X: np.ndarray) -> np.ndarray:
         """Apply Filters."""
