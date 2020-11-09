@@ -39,11 +39,11 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
         y: is not used
 
         Returns
-        ---------
+        -------
         ImageFilterTransformer
 
         Notes
-        --------
+        -----
         Fit is actually a requirement from sklearn but it is
         not actually used in this transformer.
         """
@@ -61,7 +61,7 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
         X: Image in a numpy ndarray Type
 
         Returns
-        ---------
+        -------
         Image after applying filter in a numpy ndarray Type
         """
         image_filtered = self.filter(X, **self.kwargs)
