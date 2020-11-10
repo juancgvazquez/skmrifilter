@@ -1,21 +1,10 @@
-skmrifilter package
-===================
+.. toctree::
+   :maxdepth: 4
 
-Submodules
-----------
-
-skmrifilter.transformer module
-------------------------------
+Module ``skmrifilter.ImageFilterTransformer``
+---------------------------------------------
 
 .. automodule:: skmrifilter.transformer
    :members:
-   :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: skmrifilter
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   :member-order: bysource
