@@ -5,13 +5,12 @@
 
 Welcome to Scikit-MRIFilter's documentation!
 ============================================
-.. autosummary::
-   skmrifilter
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
+   skmrifilter
 
 Indices and tables
 ==================

@@ -66,5 +66,4 @@ class ImageFilterTransformer(BaseEstimator, TransformerMixin):
             Image after applying filter in a numpy ndarray Type
         """
         image_filtered = self.filter(X, **self.kwargs)
-        #return image_filtered
-        return "estoy roto"
+        return image_filtered
