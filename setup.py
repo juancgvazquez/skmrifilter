@@ -16,7 +16,7 @@ version = {}
 with open("./skmrifilter/__init__.py", "r") as v:
     exec(v.read(), version)
 # Requirements
-requirements = ["numpy", "scikit-image", "sklearn"]
+requirements = ["numpy", "scikit-image", "sklearn", "nibabel"]
 
 
 # SETUP #
