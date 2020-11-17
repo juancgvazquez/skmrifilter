@@ -1,3 +1,4 @@
+"""Module with methods to load and preprocess MRI images."""
 import nibabel
 import glob
 import numpy as np
@@ -31,6 +32,7 @@ def load_hdr_folder(path, x_size, y_size, slices):
 
 def load_hdr_image(path, rotate=True):
     """Load data from an hdr image for MRI.
+
     Parameters
     ----------
     path: str
@@ -40,7 +42,7 @@ def load_hdr_image(path, rotate=True):
     """
     image = nibabel.load(path).get_data()
     image = image.squeeze()
-    if rotate == True:
+    if rotate is True:
         image = np.rot90(image, 1)
     return image
 
